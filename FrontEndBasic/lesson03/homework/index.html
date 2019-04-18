@@ -6,15 +6,36 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 
+<script>
+  var html = './articles/html/';
+  var css = './articles/html/';
+</script>
+
 <body>
   <div class="main">
     <header>
-      <a href="#" class="logo" >HTMLBook</a>
-      <ul class="mainmenu">
-        <li class="mainmenu-item"><a href="#"><img src="./img/html5-logo.svg" alt="html5-logo"></a></li>
-        <li class="mainmenu-item"><a href="#"><img src="./img/css3-logo.svg" alt="css3-logo"></a></li>
-      </ul>
+      <nav>
+          <a href="#" class="logo" >HTMLBook</a>
+        <ul class="mainmenu">
+          <li class="mainmenu-item"><a href="#" onclick="document.getElementById('description').src=`${html}span.html`; return false;"><img src="./img/html5-logo.svg" alt="html5-logo"></a></li>
+          <li class="mainmenu-item"><a href="#" onclick="document.getElementById('description').src=`${html}table.html`; return false;"><img src="./img/css3-logo.svg" alt="css3-logo"></a></li>
+        </ul>
+      </nav>
     </header>
+    
+    <main>
+      <section>
+        <div>
+          <iframe id="description" src="./articles/html/table.html" frameborder="0">
+
+          </iframe>
+        </div>
+      </section>
+    </main>
+    
+    <footer>
+
+    </footer>
 
   </div>  
 </body>
