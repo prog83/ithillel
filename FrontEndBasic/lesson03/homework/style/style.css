@@ -29,10 +29,16 @@ header {
   margin-right: 20px;
   padding: 5px 10px;
   background: white;
+  border-radius: 6px;
   text-align: center;
 }
 
 .mainmenu-item img {
   width: 48px;
   vertical-align: middle;
+}
+
+aside {
+  float: left;
+  border-right: 1px solid black;
 }
