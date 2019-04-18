@@ -1,0 +1,78 @@
+.block1 {
+  width: 200px;
+  height: 200px;
+  border: solid black 2px;
+  background: #FF0000;
+  margin: 10px;
+  line-height: 0;  
+}
+
+.block2 {
+  width: 200px;
+  height: 200px;
+  border: solid black 2px;
+  background: green;
+  margin: 10px;
+}
+
+.block3 {
+  width: 200px;
+  height: 200px;
+  border: solid black 2px;
+  background: blue;
+  margin: 10px;
+}
+
+.block1 div {
+  width: 50px;
+  height: 50px;
+  background: black;
+  margin: 30px auto;
+}
+/* ------------------------------------- */
+.content {
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.content img {
+  width: 250px;
+  margin: 50px;
+}
+
+.header {
+  display: block;
+  width: 500px;
+  line-height: 50px;
+  background: grey;
+}
+
+.header a {
+  margin: 0 15px;
+}
+
+.header .logo {
+  width: 32px;
+  margin: 0;
+  vertical-align: middle;
+}
+
+.main {
+  display: block;   
+  border: solid black 1px;
+  margin: 20px 0 0 0;
+}
+
+
+
+h1,h2,h3 {
+  text-align: center;
+}
+
+.tag {
+  padding: 1px 3px;
+  background: black;
+  color: white;
+}
+
