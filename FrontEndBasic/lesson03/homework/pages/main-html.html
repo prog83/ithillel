@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML sidebar</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    aside {
+      float: left;
+      width: 10%;
+    }
+    section {
+      display: inline-block;      
+      width: 90%;
+    }
+    #content {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <ul class="sidebar">
+      <li class="sidebar-item"><a href="#" onclick="document.getElementById('content').src='./content/html/table.html'; return false;">table</a></li>
+      <li class="sidebar-item"><a href="#" onclick="document.getElementById('content').src='./content/html/span.html'; return false;">span</a></li>
+    </ul>
+  </aside>
+  <section>
+    <iframe id="content" src="./content/html/index.html" frameborder="0" seamless scrolling="no">
+    </iframe>
+  </section>
+
+
+</body>
+</html>

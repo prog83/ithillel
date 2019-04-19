@@ -6,41 +6,24 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 
-<script>
-  var dirSidebar = './src/sidebar/';
-  var dirPages = './src/pages/';
-</script>
-
 <body>
-  <div class="main">
+  <div class="page">
     <header>
       <nav>
-        <a href="#" class="logo" >HTMLBook</a>
+        <a href="#" class="logo" onclick="document.getElementById('main').src='./pages/main.html'; return false;" >HTMLBook</a>
         <ul class="mainmenu">
-          <li class="mainmenu-item"><a href="#" onclick="document.getElementById('sidebar').src=`${dirSidebar}/html.html`; return false;"><img src="./img/html5-logo.svg" alt="html5-logo"></a></li>
-          <li class="mainmenu-item"><a href="#" onclick="document.getElementById('sidebar').src=`${dirSidebar}/css.html`; return false;"><img src="./img/css3-logo.svg" alt="css3-logo"></a></li>
+          <li class="mainmenu-item"><a href="#" onclick="document.getElementById('main').src='./pages/main-html.html'; return false;"><img src="./img/html5-logo.svg" alt="html5-logo"></a></li>
+          <li class="mainmenu-item"><a href="#" onclick="document.getElementById('main').src='./pages/main-css.html'; return false;"><img src="./img/css3-logo.svg" alt="css3-logo"></a></li>
         </ul>
       </nav>
     </header>
     
     <main>
-      <section>
-        <aside>
-          <iframe id="sidebar" src="./src/sidebar/html.html" frameborder="0">
-
-          </iframe>
-            
-        </aside>
-        <div>
-          <iframe id="content" src="./src/content/html/table.html" frameborder="0" seamless>
-
-          </iframe>
-        </div>
-      </section>
+      <iframe id="main" src="./pages/main.html" frameborder="0" seamless scrolling="no">
+      </iframe>
     </main>
     
     <footer>
-
     </footer>
 
   </div>  
