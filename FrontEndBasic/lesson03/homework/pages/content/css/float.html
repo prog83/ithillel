@@ -2,9 +2,56 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">  
-  <title>Css float</title>
+  <title>float</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    section>p:nth-of-type(2) {
+      font-family: "Courier New", Courier, monospace;
+    }
+    section div:nth-last-of-type(1) span {
+      display: inline-block;
+      width: 60px;
+      font-weight: bold;
+    }
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h2>float</h2>
+  <section>
+    <h1>float</h1>
+    <h3>Описание</h3>
+    <p>
+      Определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон. 
+      Когда значение свойства <b>float</b> равно <b>none</b>, элемент выводится на странице как обычно, при этом допускается, 
+      что одна строка обтекающего текста может быть на той же линии, что и сам элемент.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>
+      float: left | right | none | inherit
+    </p>
+    <h3>Значения</h3>
+    <div>        
+      <p><span>left</span> Выравнивает элемент по левому краю, а все остальные элементы, вроде текста, обтекают его по правой стороне.</p>
+      <p><span>right</span> Выравнивает элемент по правому краю, а все остальные элементы обтекают его по левой стороне.</p>
+      <p><span>none</span> Обтекание элемента не задается.</p>
+      <p><span>inherit</span> Наследует значение родителя.</p>
+    </div>
+  </section>
 </body>
 </html>

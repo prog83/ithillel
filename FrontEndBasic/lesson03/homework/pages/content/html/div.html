@@ -3,8 +3,46 @@
 <head>
   <meta charset="UTF-8">  
   <title>Tag div</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    p:nth-last-of-type(2) {
+      color: blue;
+    }
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h2>div</h2>
+  <section>
+    <h1>Тег &lt;div&gt;</h1>
+    <h3>Описание</h3>
+    <p>
+      Элемент <b>&lt;div&gt;</b> является блочным элементом и предназначен для выделения фрагмента документа с целью изменения вида содержимого. 
+      Как правило, вид блока управляется с помощью стилей. Чтобы не описывать каждый раз стиль внутри тега, 
+      можно выделить стиль во внешнюю таблицу стилей, а для тега добавить атрибут <i><b>class</b></i> или <i><b>id</b></i> с именем селектора.
+      <br>
+      Как и при использовании других блочных элементов, содержимое тега <b>&lt;div&gt;</b> всегда начинается с новой строки.
+      После него также добавляется перенос строки.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>&lt;div&gt;...&lt;/div&gt;</p>
+    <h3>Закрывающий тег</h3>
+    <p>Обязателен.</p>
+  </section>
 </body>
 </html>

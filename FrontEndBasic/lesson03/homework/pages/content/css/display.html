@@ -2,9 +2,47 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">  
-  <title>Css dispaly</title>
+  <title>display</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    section p:nth-of-type(2) {
+      font-family: "Courier New", Courier, monospace;
+    }    
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h2>dispaly</h2>
+  <section>
+    <h1>display</h1>
+    <h3>Описание</h3>
+    <p>
+      Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>
+      display: block | inline | inline-block | inline-table | list-item | none | run-in | table | table-caption | table-cell | table-column-group | table-column | table-footer-group | table-header-group | table-row | table-row-group
+    </p>
+    <h3>Значения</h3>
+    <p>        
+      Список возможных значений этого свойства, понимаемый разными браузерами очень короткий — <b>block</b>, <b>inline</b>, <b>list-item</b> и <b>none</b>. 
+      Все остальные допустимые значения поддерживаются браузерами выборочно. 
+    </p>
+  </section>
 </body>
 </html>

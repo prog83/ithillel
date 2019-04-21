@@ -1,0 +1,27 @@
+.box {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  margin: 1px;
+}
+
+table tr:nth-child(odd) td:nth-child(even) {
+  background: black;
+}
+
+table tr:nth-child(even) td:nth-child(odd) {
+  background: black;
+}
+
+body>div {
+  display: block;
+  width: 380px;
+  border: 1px solid black;
+  padding: 3px;
+  font-size: o;
+}
+
+div .box:nth-child(even) {
+  background: black;
+}

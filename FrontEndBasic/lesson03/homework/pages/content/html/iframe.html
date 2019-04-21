@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <title>Tag iframe</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    p:nth-last-of-type(2) {
+      color: blue;
+    }
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Тег &lt;iframe&gt;</h1>
+    <h3>Описание</h3>
+    <p>
+      Тег <b>&lt;iframe&gt;</b> создает <i><b>плавающий фрейм</b></i>, который находится внутри обычного документа,
+      он позволяет загружать в область заданных размеров любые другие независимые документы.
+      <br>
+      Тег <b>&lt;iframe&gt;</b> является контейнером, содержание которого игнорируется браузерами, не поддерживающими данный тег. 
+      Для таких браузеров можно указать альтернативный текст, который увидят пользователи. 
+      Он должен располагаться между элементами <b>&lt;iframe&gt;</b> и <b>&lt;/iframe&gt;</b>.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>&lt;iframe&gt;...&lt;/iframe&gt;</p>
+    <h3>Закрывающий тег</h3>
+    <p>Обязателен.</p>
+  </section>
+</body>
+</html>

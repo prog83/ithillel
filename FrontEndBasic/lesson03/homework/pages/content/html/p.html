@@ -3,8 +3,47 @@
 <head>
   <meta charset="UTF-8">  
   <title>Tag p</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    p:nth-last-of-type(2) {
+      color: blue;
+    }
+    p:nth-of-type(1) > span {
+      text-decoration: underline dotted;
+    }
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
 </head>
 <body>
-  <h2>p</h2>
+  <section>
+    <h1>Тег &lt;p&gt;</h1>
+    <h3>Описание</h3>
+    <p>
+      Определяет текстовый абзац. Тег <b>&lt;iframe&gt;</b> является блочным элементом, всегда начинается с новой строки, 
+      абзацы текста идущие друг за другом разделяются между собой <span>отбивкой</span>.
+      Величиной отбивки можно управлять с помощью стилей. Если закрывающего тега нет, считается, 
+      что конец абзаца совпадает с началом следующего блочного элемента.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>&lt;p&gt;Текст&lt;/p&gt;</p>
+    <h3>Закрывающий тег</h3>
+    <p>Не обязателен.</p>
+  </section>
 </body>
 </html>

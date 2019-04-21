@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <title>border</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    section p:nth-of-type(2) {
+      font-family: "Courier New", Courier, monospace;
+    }
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>border</h1>
+    <h3>Описание</h3>
+    <p>
+      Универсальное свойство <b>border</b> позволяет одновременно установить толщину, стиль и цвет границы вокруг элемента.
+      Значения могут идти в любом порядке, разделяясь пробелом, браузер сам определит, какое из них соответствует нужному свойству.
+      Для установки границы только на определенных сторонах элемента, воспользуйтесь свойствами <b>border-top</b>, <b>border-bottom</b>, <b>border-left</b>, <b>border-right</b>.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>
+      border: [border-width || border-style || border-color] | inherit
+    </p>
+    <h3>Значения</h3>
+    <p>
+      Значение <b>border-width</b> определяет толщину границы. 
+      <br>
+      Для управления ее видом предоставляется несколько значений <b>border-style</b>.
+      <br>
+      <b>border-color</b> устанавливает цвет границы, значение может быть в любом допустимом для CSS формате.
+      <br>
+      <b>inherit</b> наследует значение родителя.
+    </p>
+  </section>
+</body>
+</html>

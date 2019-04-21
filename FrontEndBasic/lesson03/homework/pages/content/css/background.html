@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">  
+  <title>background</title>
+  <style>
+    body {
+      font-family: Georgia, "Times New Roman", Times, serif;
+      color: #383838;
+      margin: 0 0 0 5px;
+    }
+    h1, h3 {
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: justify;
+    }
+    section p:nth-of-type(2) {
+      font-family: "Courier New", Courier, monospace;
+    }    
+    p::first-letter {
+      margin-left: 15px;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h1>background</h1>
+    <h3>Описание</h3>
+    <p>
+      Универсальное свойство <b>background</b> позволяет установить одновременно до пяти характеристик фона. 
+      Значения могут идти в любом порядке, браузер сам определит, какое из них соответствует нужному свойству.
+      Для подробного ознакомления смотрите информацию о каждом свойстве отдельно. 
+      В CSS3 допустимо указывать параметры сразу нескольких фонов, перечисляя их через запятую.
+    </p>
+    <h3>Синтаксис</h3>
+    <p>
+      CSS3 background: [<фон>, ]* <последний_фон>
+      <br><br>
+      Здесь:
+      <br>
+      <фон> = [background-attachment || background-image || background-position || background-repeat] | inherit
+      <br><br>
+      <последний_фон> = [background-attachment || background-color || background-image || background-position || background-repeat] | inherit
+    </p>
+    <h3>Значения</h3>
+    <p>        
+      Любые комбинации пяти значений, разделяемых между собой пробелом, определяющих стиль фона, в произвольном порядке. 
+      Ни одно значение не является обязательным, поэтому неиспользуемые можно опустить. 
+      <b>inherit</b> наследует значение у родительского элемента.
+    </p>
+  </section>
+</body>
+</html>
