@@ -5,7 +5,9 @@
   border: 1px solid black;
   margin: 1px;
 }
-
+table {
+  padding: 3px;
+}
 table tr:nth-child(odd) td:nth-child(even) {
   background: black;
 }
@@ -15,11 +17,10 @@ table tr:nth-child(even) td:nth-child(odd) {
 }
 
 body>div {
-  display: block;
-  width: 380px;
+  display: inline-block;
   border: 1px solid black;
   padding: 3px;
-  font-size: o;
+  font-size: 0;
 }
 
 div .box:nth-child(even) {

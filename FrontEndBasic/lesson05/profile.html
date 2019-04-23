@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Анкета</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="clearfix">
+    <h2>Анкета</h2>
+    <form action="">
+      <div class="info">
+        <label for="lastname" required>Фамилия</label>
+        <input id="lastname" type="text" placeholder="Иванов"><br>
+        <label for="firstname" required>Имя</label>
+        <input id="firstname" type="text" placeholder="Иван"><br>
+        <label for="middlename">Отчество</label>
+        <input id="middlename" type="text" placeholder="Иванович"><br>
+        <label for="phone" required>Телефон</label>
+        <input id="phone" type="tel" placeholder="0951112233"><br>
+        <label for="email" required>Email</label>
+        <input id="email" type="email" placeholder="ivanov@gmail.com"><br>
+        <label for="description">Описание</label>        
+        <textarea id="description" rows="5"></textarea><br>
+        <label for="person">Подписаться на рассылку
+          <input id="person" type="checkbox">
+          <img src="./img/checkbox.svg" alt="no">
+          <img checked src="./img/checkbox-checked.svg" alt="yes">
+        </label>
+      </div>
+      
+      <div class="photo">
+        <img src="./img/alf.jpg" alt="photo"><br>
+        <input type="file" value="Фото">
+      </div>
+      <p>
+        <input type="submit" value="Отправить" onclick="alert(`Отправлено!`); return false;">
+      </p>
+    </form>
+</div>
+  
+</body>
+</html>
