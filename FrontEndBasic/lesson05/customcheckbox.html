@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <title>Custom checkbox</title>
+
+  <style>
+      .custom-checkbox {
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 32px;
+        border: 1px solid black;
+      }
+    
+      .custom-checkbox > input {
+        width: 0px;    
+        margin: 0;
+      }
+    
+      .custom-checkbox > input:checked::before {
+        content: '\2611 Да';
+        display: inline-block;
+        width: 60px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -30px;
+        height: 32px;
+        font-size: 24px;
+      }
+      
+      .custom-checkbox > input::before {
+        content: '\2612 Нет';
+        display: inline-block;
+        width: 60px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -30px;
+        line-height: 32px;
+        font-size: 24px;    
+      } 
+    </style>
+
+</head>
+<body>
+  <label class="custom-checkbox" for="customCheckbox">
+    <input id="customCheckbox" type="checkbox">
+  </label>  
+</body>
+</html>
