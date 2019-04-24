@@ -59,6 +59,7 @@ p {
 
 .photo {
   float: right;
+  text-align: center;
 }
 
 .photo img {
