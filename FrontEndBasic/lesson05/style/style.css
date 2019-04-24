@@ -30,8 +30,8 @@ input:not([type="file"]):not([type="submit"]) {
 }
 
 input:not([type="file"]):not([type="submit"]):focus, textarea:focus {
-  background: #ffffbb;
-  border-width: 2px;
+  background: #FFF9C4;
+  border: 2px solid #FFEB3B;
 }
 
 label[required]::after {
