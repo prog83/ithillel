@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">  
+  <title>Custom checkbox</title>
+
+  <style>
+      .custom-checkbox {
+        display: inline-block;
+        position: relative;
+        width: 100px;
+        height: 32px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+
+      .custom-checkbox > div {
+        display: inline-block;
+        width: 70px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin-left: -35px;
+        line-height: 32px;
+        font-size: 24px;
+      }
+    
+      .custom-checkbox > input {
+        display: none;        
+      }
+
+      .custom-checkbox > div {
+        display: none;
+      }
+
+      .custom-checkbox > input:checked ~ div[checked] {
+        display: inline-block;
+      }
+
+      .custom-checkbox > input:not(:checked) ~ div:not([checked]) {
+        display: inline-block;
+      }
+
+    </style>
+
+</head>
+<body>
+  <label class="custom-checkbox" for="customCheckbox">
+    <input hidden id="customCheckbox" type="checkbox">
+    <div checked>&#9745; Да</div>
+    <div>&#9746; Нет</div>
+  </label>  
+</body>
+</html>

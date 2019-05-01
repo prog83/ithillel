@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+
+header {
+  height: 115px;
+  background-image: linear-gradient(to top, #e0e0e0 0%, #ffffff 100%);
+}
+
+footer {
+  height: 15px;
+  color: #8b8a8a;
+  font-family: "Arial MT";
+  font-size: 17px;
+  font-weight: 400;
+  text-align: right;
+}
+
+.content {
+  display: block;
+  box-sizing: content-box;
+  width: 1280px;
+  margin: auto;
+  padding: 0;
+  border: 1px solid black;
+}
+
+.logo {
+  display: inline-block;
+  width: 680px;
+  height: 115px;
+  text-align: center;
+}
+
+.logo > img {
+  /* display: block;
+  margin: auto;   */
+}
+
+.menu {
+  display: inline-block;  
+  width: 590px;
+  /* height: 100%; */
+}
