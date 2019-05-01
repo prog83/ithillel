@@ -27,18 +27,35 @@ footer {
 
 .logo {
   display: inline-block;
+  position: relative;
   width: 680px;
-  height: 115px;
-  text-align: center;
+  height: 115px;  
+  text-align: center;  
 }
 
 .logo > img {
-  /* display: block;
-  margin: auto;   */
+  /* position: absolute;
+  top: 50%;
+  margin-top: -24px; */
+  vertical-align: middle;
 }
 
-.menu {
+/* .menu {
   display: inline-block;  
-  width: 590px;
+  width: 590px; */
   /* height: 100%; */
+/* } */
+
+.menu {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 590px;
+  vertical-align: top;
+  height: 115px;
+  
+}
+.menu > div {
+  display: inline-block;
+  height: 115px;
 }
