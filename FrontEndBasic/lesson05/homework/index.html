@@ -49,14 +49,15 @@
       <h2>
         Please select an image from your computer
       </h2>
-      <div id="selectImage">
-        <div id="nameImage">
-          <label>            
+      <div id="fieldImage">
+        <div id="selectImage">
+          <span id="nameImage"></span>
+          <label>        
             <div id="browseFile">Browse</div>
-            <input hidden type="file"></input>
+            <input id="selectFile" hidden type="file" onChange="document.getElementById('nameImage').innerText=document.getElementById('selectFile').files[0].name;"></input>
           </label>
         </div>
-        <button id="uploadImage" onclick="alert('TO DO!');">Upload image</button>
+        <button id="uploadImage" onclick="document.getElementById('nameImage').innerText ? alert('TO DO: Upload image.') : alert('Browse image!');">Upload image</button>
       </div>
       <section id="gridImages">
         <div class="cellImage">
