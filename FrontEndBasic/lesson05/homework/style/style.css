@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -17,6 +18,11 @@ footer {
   text-align: right;
 }
 
+h2 {
+  color: #565555;
+  text-align: center;
+}
+
 .content {
   display: block;
   box-sizing: content-box;
@@ -29,7 +35,7 @@ footer {
 .logo {
   display: inline-block;
   vertical-align: top;
-  width: 680px;  
+  width: 600px;  
   line-height: 115px;
   text-align: center;  
 }
@@ -42,7 +48,7 @@ ul.menu {
   display: inline-block;
   vertical-align: top;
   list-style: none;
-  margin: 0;
+  margin: 0 0 0 90px;
   padding: 0;  
 }
 ul.menu > li {
@@ -75,6 +81,84 @@ ul.menu > li.divider {
   display: inline-block;
   margin-top: 10px;
   color: #545454;
-  font: 400 16px "Helvetica CE";
+  font-size: 16px;
+  font-weight: 400;
   text-shadow: 1px 1px 0 #ffffff; 
+}
+
+#selectImage {
+  width: 675px;
+  margin: auto;
+  font-size: 0;
+}
+
+#nameImage {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  width: 445px;
+  height: 47px;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #ffffff 0%, #ffffff 85%, #ffffff 90%, #e2dada 100%);
+}
+
+#browseFile {
+  position: absolute;
+  top: 50%;
+  margin-top: -16px;
+  right: 10px;
+  width: 92px;
+  height: 32px;
+  border-radius: 5px;
+  background-color: #969292;
+  opacity: 0.59;  
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  text-align: center;
+  line-height: 32px;
+}
+
+#uploadImage {
+  vertical-align: top;
+  width: 210px;
+  height: 47px;
+  border: 0;
+  border-radius: 5px;
+  background-image: linear-gradient(to top, #ff6600 0%, #ffa400 100%);
+  margin-left: 15px;
+  color: #ffffff;  
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#gridImages {
+  border: 1px solid black;
+  width: 1100px;
+  margin: 60px auto;
+  font-size: 0;
+  text-align: center;
+  
+}
+
+.cellImage {
+  display: inline-block;
+  vertical-align: top;
+  box-sizing: border-box;
+  width: 220px;
+  height: 280px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 2px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(253, 254, 255, 0.1) 5%, rgba(255, 255, 255, 0.1) 100%);
+  margin: 15px 20px;
+  padding: 7px;
+}
+
+.cellImage > img {
+  width: 202px;
+  height: 197px;
 }
