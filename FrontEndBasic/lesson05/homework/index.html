@@ -6,15 +6,15 @@
   <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-  <div class="content">
-    <header>
+  <header>
+    <div class="bar">
       <div class="logo">
         <a href="/"><img src="./img/PhotoCageApp.png" alt="PhotoCage app"></a>
       </div>
       <ul class="menu">
         <li>
           <a href="#">
-            <img src="./img/home.png" alt="Home">
+            <img src="./img/icon/home.png" alt="Home">
             <br>
             <span class="menu-title">Home</span>            
           </a>
@@ -22,7 +22,7 @@
         <li class="divider"></li>
         <li>
           <a href="#">
-            <img src="./img/gallery.png" alt="Gallery">
+            <img src="./img/icon/gallery.png" alt="Gallery">
             <br>
             <span class="menu-title">Gallery</span>            
           </a>
@@ -30,7 +30,7 @@
         <li class="divider"></li>
         <li>
           <a href="#">
-            <img src="./img/members.png" alt="Members">
+            <img src="./img/icon/members.png" alt="Members">
             <br>
             <span class="menu-title">Members</span>            
           </a>
@@ -38,54 +38,268 @@
         <li class="divider"></li>
         <li>
           <a href="#">
-            <img src="./img/logout.png" alt="Logout">
+            <img src="./img/icon/logout.png" alt="Logout">
             <br>
             <span class="menu-title">Logout</span>            
           </a>
         </li>
-      </ul>  
-    </header>
-    <main>
-      <h2>
-        Please select an image from your computer
-      </h2>
-      <div id="fieldImage">
-        <div id="selectImage">
-          <span id="nameImage"></span>
-          <label>        
-            <div id="browseFile">Browse</div>
-            <input id="selectFile" hidden type="file" onChange="document.getElementById('nameImage').innerText=document.getElementById('selectFile').files[0].name;"></input>
-          </label>
-        </div>
-        <button id="uploadImage" onclick="document.getElementById('nameImage').innerText ? alert('TO DO: Upload image.') : alert('Browse image!');">Upload image</button>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <h2>
+      Please select an image from your computer
+    </h2>
+    <div id="fieldImage">
+      <div id="selectImage">
+        <span id="nameImage"></span>
+        <label>        
+          <div id="browseFile">Browse</div>
+          <input id="selectFile" hidden type="file" onChange="document.getElementById('nameImage').innerText=document.getElementById('selectFile').files[0].name;"></input>
+        </label>
       </div>
-      <section id="gridImages">
-        <div class="cellImage">
-          <img src="./img/img01.png" alt="">
+      <button id="uploadImage" onclick="document.getElementById('nameImage').innerText ? alert('TO DO: Upload image.') : alert('Browse image!');">Upload image</button>
+    </div>
+    <section id="gridImages">
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img01.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date01.png" alt="Date Image">
         </div>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <br>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <br>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-        <div class="cellImage"></div>
-      </section>
-    </main>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
 
-    <footer>
-      <span>
-        &copy; 2013 Photocage app powered by cssauthor.com
-      </span>
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img02.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date02.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
 
-    </footer>
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img03.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date03.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
 
-  </div>
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img04.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date04.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div> 
+
+      <br>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img05.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date05.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img06.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date06.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img07.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date07.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img08.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date08.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <br>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img09.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date09.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img10.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date10.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img11.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date11.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>            
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+
+      <div class="cellImage">
+        <div class="box-image">
+          <img src="./img/img12.png" alt="Image">
+          <a href="#" onclick="alert('Zoom Up!');"><img class="zoomup-image" src="./img/icon/zoomUp.png" alt="Zoom Up"></a>
+          <img class="date-image" src="./img/date12.png" alt="Date Image">
+        </div>
+        <div class="description-image">
+          <span>Lorem Ipsum is simply</span>
+          <a href="#" onclick="alert('Favorite!');"><img src="./img/icon/favorite.png" alt="Favorite"></a>
+        </div>                    
+        <div class="share-image">
+          <span>Share</span>
+          <a href="#"><img src="./img/icon/twitter.png" alt="Twitter"><span class="tooltip">Share in Twitter</span></a>
+          <a href="#"><img src="./img/icon/facebook.png" alt="Facebook"><span class="tooltip">Share in Facebook</span></a>
+          <a href="#"><img class="icon-pinterest" src="./img/icon/pinterest.png" alt="Pinterest"><span class="tooltip">Share in Pinterest</span></a>
+          <a href="#"><img src="./img/icon/tumblr.png" alt="Tumblr"><span class="tooltip">Share in Tumblr</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>
+      &copy; 2013 Photocage app powered by cssauthor.com
+    </span>
+  </footer>
 </body>
 </html>

@@ -4,18 +4,19 @@ body {
 }
 
 header {
-  height: 115px;
+  height: 118px;
   font-size: 0;
   background-image: linear-gradient(to top, #e0e0e0 0%, #ffffff 100%);
 }
 
 footer {
-  height: 15px;
+  height: 75px;
+  padding: 0 150px;
   color: #8b8a8a;
-  font-family: "Arial MT";
   font-size: 17px;
   font-weight: 400;
   text-align: right;
+
 }
 
 h2 {
@@ -23,20 +24,17 @@ h2 {
   text-align: center;
 }
 
-.content {
-  display: block;
-  box-sizing: content-box;
-  width: 1280px;
+.bar {
+  width: 1030px;
   margin: auto;
-  padding: 0;
-  border: 1px solid black;
 }
 
 .logo {
   display: inline-block;
+  margin: 0 35px;
   vertical-align: top;
-  width: 600px;  
-  line-height: 115px;
+  /* width: 592px;   */
+  line-height: 118px;
   text-align: center;  
 }
 
@@ -48,19 +46,19 @@ ul.menu {
   display: inline-block;
   vertical-align: top;
   list-style: none;
-  margin: 0 0 0 90px;
+  margin: 0 0 0 215px;
   padding: 0;  
 }
 ul.menu > li {
   display: inline-block;
-  width: 117px;
-  height: 115px;
+  width: 108px;
+  height: 118px;
 }
 
 li > a {
   display: table-cell;
-  width: 117px;
-  height: 115px;  
+  width: 108px;
+  height: 118px;  
   text-align: center;
   vertical-align: middle;  
   text-decoration: none;
@@ -77,6 +75,7 @@ ul.menu > li.divider {
   background: #545454;
   opacity: 0.11;  
 }
+
 .menu-title {
   display: inline-block;
   margin-top: 10px;
@@ -86,9 +85,14 @@ ul.menu > li.divider {
   text-shadow: 1px 1px 0 #ffffff; 
 }
 
+main {
+  padding-top: 15px;
+}
+
 #fieldImage {
   width: 675px;
   margin: auto;
+  padding: 5px;
   font-size: 0;
 }
 
@@ -142,29 +146,150 @@ ul.menu > li.divider {
 }
 
 #gridImages {
-  border: 1px solid black;
-  width: 1100px;
-  margin: 60px auto;
+  width: 1030px;
+  margin: 53px auto 45px auto;
   font-size: 0;
-  text-align: center;
-  
+  text-align: center;  
 }
 
 .cellImage {
   display: inline-block;
   vertical-align: top;
   box-sizing: border-box;
-  width: 220px;
-  height: 280px;
+  width: 218px;
+  height: 279px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.17);
   border: 1px solid rgba(0, 0, 0, 0.16);
   border-radius: 2px;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(253, 254, 255, 0.1) 5%, rgba(255, 255, 255, 0.1) 100%);
-  margin: 15px 20px;
+  margin: 15px 19px;
   padding: 7px;
+  text-align: initial;
+  color: #979393;
+  font-size: 15px;
+  font-weight: 400;
 }
 
-.cellImage > img {
+.box-image {
+  position: relative;
+}
+
+.box-image + img {
   width: 202px;
   height: 197px;
+}
+
+.box-image > .date-image {
+  width: 77px;
+  height: 14px;
+  position: absolute;
+  bottom: 10px;
+  left: 8px;  
+  z-index: 99;
+}
+
+.box-image .zoomup-image {
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -13px 0 0 -13px;
+  z-index: -1;
+}
+
+.box-image:hover .zoomup-image {
+  z-index: 1000;
+}
+
+.description-image {
+  padding: 6px 3px;
+  text-align: right;
+}
+
+.description-image > span {  
+  margin-right: 16px;
+}
+
+.description-image img {
+  width: 22px;
+  height: 22px;  
+  vertical-align: middle;
+}
+
+.share-image {
+  padding: 6px 3px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  text-align: right;
+}
+
+.share-image > span {
+  margin-right: 7px;
+  font-size: 14px;
+}
+
+.share-image a {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;  
+  background: url(../img/icon/bg-icon.png);
+  vertical-align: middle;
+}
+
+.share-image a:hover{  
+  background: url(../img/icon/bg-social-active.png);
+}
+
+.share-image a img {
+  position: absolute;  
+  top: 50%;
+  left: 50%;
+  margin-top: -7px;
+  margin-left: -4px;
+}
+
+.share-image a img.icon-pinterest {
+  margin-left: -6px;
+}
+
+.share-image a {
+  display: inline-block;
+  position: relative;
+  width: 22px;
+  height: 22px;  
+  background: url(../img/icon/bg-icon.png);
+  vertical-align: middle;
+}
+
+.share-image a .tooltip {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  border-radius: 6px;
+  padding: 4px 0;
+  position: absolute;
+  z-index: 100;
+  top: 135%;
+  left: 50%;
+  margin-left: -24px;
+}
+
+.share-image a .tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 20%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent black transparent;
+}
+
+.share-image a:hover .tooltip {
+  visibility: visible;
 }
