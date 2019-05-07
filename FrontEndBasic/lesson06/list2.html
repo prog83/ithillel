@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>List</title>
+  <style>
+    ul {
+      /* width: 100px; */
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      padding: 10px;
+      border: 1px solid black;
+      border-radius: 3px;
+      font-size: 0;  
+    }
+
+    ul > li {
+      display: inline-block;
+      position: relative;
+      font-size: 16px;
+    }
+    
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    ul > li:nth-child(odd) {
+      background: blue;
+    }
+
+    ul > li:nth-child(even) {
+      background: green;
+    }
+
+    li + li:before {
+      content: "";
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: black;
+    }
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="#">Ссылка</a></li>
+    <li><a href="#">Ссылка</a></li>
+    <li><a href="#">Ссылка</a></li>
+    <li><a href="#">Ссылка</a></li>
+    <li><a href="#">Ссылка</a></li>
+    <li><a href="#">Ссылка</a></li>
+    <li><a href="#">Ссылка</a></li>
+  </ul>
+  
+</body>
+</html>

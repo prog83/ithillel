@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    div {
+      display: inline-block;
+    }
+
+    .shape1 {
+      width: 100px;
+      border-top: 25px solid blue;
+      border-bottom: 25px solid yellow;
+    }
+    
+    .shape2 {
+      width: 75px;
+      border-top: 25px solid red;
+      border-bottom: 25px solid green;
+      border-right: 25px solid transparent;
+    }
+
+    .shape3 {
+      width: 5px;
+      border-top: 25px solid yellow;      
+      border-bottom: 25px solid lightgrey;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      /* border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; */
+    }
+
+    .shape4 {
+      position: relative;
+      width: 0px;
+      border-width: 50px;
+      border-style: solid;
+      border-color: transparent transparent black transparent;
+    }
+
+    .shape4::before {
+      content: "";
+      position: absolute;
+      width: 0px;
+      left: -50px;
+      bottom: -150px;
+      border-width: 50px;
+      border-style: solid;
+      border-color:  red transparent transparent transparent;
+    }
+
+    .shape5 {
+      position: relative;
+      width: 50px;
+      height: 30px;
+      box-sizing: border-box;
+      border-top: 10px solid black;
+      border-bottom: 10px solid black;
+    }
+    
+    .shape5::after {
+      content: "";
+      position: absolute;
+      width: 50px;
+      left: 0;
+      bottom: -30px;
+      border-top: 10px solid black;      
+    }
+
+    .shape6 {
+      width: 100px;
+      height: 100px;
+      background: black;
+      border: 3px solid;
+      border-color: green red blue yellow;
+      border-top-left-radius: 80%;
+      border-bottom-right-radius: 80%;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="shape1"></div>
+
+  <div class="shape2"></div>
+
+  <div class="shape3"></div>
+  
+  <div class="shape4"></div>
+
+  <div class="shape5"></div>
+  
+  <div class="shape6"></div>
+
+</body>
+</html>
