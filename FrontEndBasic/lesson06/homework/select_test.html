@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">  
-  <title>Select Field</title>
+  <title>Select</title>
   <style>
     body {
       font-size: 0;
@@ -12,6 +12,13 @@
       font-size: 16px;
     }
     
+    .selectField, .selectFieldDiv {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+    }
+
+    /* *********** CHECKBOX ************ */
     .selectField {
       display: inline-block;
       position: relative;    
@@ -20,9 +27,6 @@
       box-sizing: border-box;
       background: white;
       font-size: 20px;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
     }
 
     .selectField > input {
@@ -99,6 +103,83 @@
       font-weight: bold;
     }    
 
+    /* *********** DIV ************ */
+    .selectFieldDiv {
+      display: inline-block;
+      position: relative;    
+      width: 200px;
+      height: 36px;
+      box-sizing: border-box;
+      background: white;
+      font-size: 20px;
+    }
+
+    .selectFieldDiv > span {
+      display: inline-block;      
+      width: 100%;
+      height: 36px;
+      line-height: 36px;
+      box-sizing: inherit;
+      padding-left: 10px;
+      border: 1px solid #5F5F5F;
+      border-radius: 4px;
+      background-image: url(./img/dropdown.svg);
+      background-repeat: no-repeat;
+      background-position: right center;      
+    }
+
+    .selectFieldDiv span:hover  {
+      border: 1px solid black;
+      cursor: pointer;
+    }
+
+    .selectFieldDiv span:active {
+      border-color: #1976D2;
+      border-width: 2px 2px 0 2px;
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      background-image: url(./img/dropup.svg);
+    }
+
+    .selectFieldDiv > ul {      
+      display: none;
+      position: absolute;
+      background: inherit;
+      z-index: 999;
+      box-sizing: inherit;
+      width: 100%;
+      left: 0;
+      top: 100%;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      border-color: #1976D2;
+      border-width: 0 2px 2px;
+      border-style: solid;
+      border-bottom-left-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
+
+    .selectFieldDiv li {
+      border-top: 1px solid #DBDBDB;
+      line-height: 36px;
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    .selectFieldDiv li:hover {
+      background: #DBDBDB;
+      cursor: pointer;
+    }
+
+    .selectFieldDiv:active > ul {
+      display: block;
+    }
+
+    .selectFieldDiv > ul:hover {
+      display: block;
+    }
+  
   </style>
 </head>
 <body>
@@ -109,7 +190,7 @@
       <script>
         function chooseItem(e) {
           document.querySelector('.selectField > span').innerText = e.innerText; 
-          const checkedItem = document.querySelector('.selectField ul > li[checked]');
+          let checkedItem = document.querySelector('.selectField ul > li[checked]');
           if (checkedItem) checkedItem.removeAttribute('checked');
           e.setAttribute('checked', '');
         }
@@ -123,5 +204,13 @@
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, voluptatem tempora.     
     Odit unde, mollitia dolorem eos, voluptatibus cupiditate deleniti distinctio animi tenetur perferendis error consequatur. Veritatis eos repellat dignissimos blanditiis.
   </p>
+  <div class="selectFieldDiv">
+    <span></span>
+    <ul>
+      <li onclick="document.querySelector('.selectFieldDiv > span').innerText=this.innerText;">Front-End Basic</li>
+      <li onclick="document.querySelector('.selectFieldDiv > span').innerText=this.innerText;">Front-End Pro</li>
+      <li onclick="document.querySelector('.selectFieldDiv > span').innerText=this.innerText;">Front-End Pro Plus</li>
+    </ul>
+  </div>
 </body>
 </html>

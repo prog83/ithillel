@@ -6,17 +6,18 @@ body {
 header {
   height: 118px;
   font-size: 0;
-  background-image: linear-gradient(to top, #e0e0e0 0%, #ffffff 100%);
+  background-image: linear-gradient(to top, #e0e0e0, #fff);
 }
 
 footer {
-  height: 75px;
-  padding: 0 150px;
+  width: 1030px;
+  margin: auto;
+  box-sizing: border-box; 
+  padding: 20px 30px;
   color: #8b8a8a;
   font-size: 17px;
   font-weight: 400;
   text-align: right;
-
 }
 
 h2 {
@@ -49,6 +50,7 @@ ul.menu {
   margin: 0 0 0 215px;
   padding: 0;  
 }
+
 ul.menu > li {
   display: inline-block;
   width: 108px;
@@ -89,14 +91,19 @@ main {
   padding-top: 15px;
 }
 
-#fieldImage {
+.toopbar {
+  width: 1030px;
+  margin: auto;
+}
+
+.fieldImage {
   width: 675px;
   margin: auto;
   padding: 5px;
   font-size: 0;
 }
 
-#selectImage {
+.selectImage {
   display: inline-block;
   vertical-align: top;
   position: relative;
@@ -106,6 +113,7 @@ main {
   border-radius: 5px;
   background-image: linear-gradient(to top, #ffffff 0%, #ffffff 85%, #ffffff 90%, #e2dada 100%);
 }
+
 #nameImage {
   padding: 0 5px;
   color: #565555;
@@ -113,7 +121,7 @@ main {
   line-height: 47px;
 }
 
-#browseFile {
+.browseFile {
   position: absolute;
   top: 50%;
   margin-top: -16px;
@@ -131,7 +139,7 @@ main {
   line-height: 32px;
 }
 
-#uploadImage {
+.uploadImage {
   vertical-align: top;
   width: 210px;
   height: 47px;
@@ -145,7 +153,7 @@ main {
   cursor: pointer;
 }
 
-#gridImages {
+.gridImages {
   width: 1030px;
   margin: 53px auto 45px auto;
   font-size: 0;
@@ -180,12 +188,13 @@ main {
 }
 
 .box-image > .date-image {
-  width: 77px;
-  height: 14px;
   position: absolute;
-  bottom: 10px;
+  bottom: 8px;
   left: 8px;  
   z-index: 99;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .box-image .zoomup-image {
@@ -207,14 +216,34 @@ main {
   text-align: right;
 }
 
-.description-image > span {  
+.description-image > span {
+  /* line-height: 22px; */
   margin-right: 16px;
 }
 
-.description-image img {
+.description-image > label.favorite > input {
+  display: none;
+}
+
+.description-image > label.favorite > input + div {
+  display: inline-block;
+  border-radius: 50%;
+  /* text-align: center; */
+  cursor: pointer;
+}
+
+.description-image > label.favorite > input + div:hover {
+  background-image: radial-gradient(#B1AEAE 50%, transparent 52%);
+}
+
+.description-image > label.favorite img {
   width: 22px;
-  height: 22px;  
+  height: 22px;
   vertical-align: middle;
+}
+
+.description-image > label.favorite > input:checked + div {
+  background-image: radial-gradient(blue 50%, transparent 52%);
 }
 
 .share-image {
@@ -233,13 +262,26 @@ main {
   display: inline-block;
   position: relative;
   width: 22px;
-  height: 22px;  
-  background: url(../img/icon/bg-icon.png);
+  height: 22px;
+  border-radius: 50%;
+  background: #B1AEAE;
   vertical-align: middle;
 }
 
-.share-image a:hover{  
-  background: url(../img/icon/bg-social-active.png);
+.share-image a.share-twitter:hover {  
+  background: #1DA1F2;
+}
+
+.share-image a.share-facebook:hover {  
+  background: #3B5998;
+}
+
+.share-image a.share-pinterest:hover {  
+  background: #E60023;
+}
+
+.share-image a.share-tumblr:hover {  
+  background: #395976;
 }
 
 .share-image a img {
@@ -250,17 +292,8 @@ main {
   margin-left: -4px;
 }
 
-.share-image a img.icon-pinterest {
+.share-image a.share-pinterest img {
   margin-left: -6px;
-}
-
-.share-image a {
-  display: inline-block;
-  position: relative;
-  width: 22px;
-  height: 22px;  
-  background: url(../img/icon/bg-icon.png);
-  vertical-align: middle;
 }
 
 .share-image a .tooltip {

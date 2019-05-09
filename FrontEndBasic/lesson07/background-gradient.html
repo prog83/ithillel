@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>background & gradient</title>
+</head>
+<style>
+  body {
+    /* background-repeat: no-repeat; */
+    /* background-image: linear-gradient(45deg, red, blue); */
+  }
+  div.background {
+    width: 300px;
+    height: 300px;
+    background-color: lightblue;
+    background-image: url(./img/pepe.png), url(./img/pepe.png);
+    background-repeat: no-repeat;
+    background-position: left top, right bottom;
+    background-size: 80px 80px, 120px 120px;
+  }
+
+  div.gradient {
+    width: 300px;
+    height: 300px;
+    background-repeat: repeat-y;
+    background-image: linear-gradient(0deg,black 20px, white 20px);
+    background-size: 100% 40px;
+  }
+
+  
+  div.rainbow {
+    width: 300px;
+    height: 300px;
+    background-image: linear-gradient(45deg,red, orange, yellow, green, lightblue, blue, violet);
+  }
+
+</style>
+<body>
+  <div class="background"></div>
+  <div class="gradient"></div>
+  <div class="rainbow"></div>
+</body>
+</html>
