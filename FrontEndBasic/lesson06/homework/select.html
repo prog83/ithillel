@@ -103,12 +103,13 @@
 </head>
 <body>
   <label class="selectField">
-    <input type="checkbox" id="selectInput">
+    <input type="checkbox" id="selectInput" name="selectInput" value="">
     <span></span>
     <ul>
       <script>
         function chooseItem(e) {
-          document.querySelector('.selectField > span').innerText = e.innerText; 
+          document.querySelector('.selectField > span').innerText = e.innerText;
+          document.getElementById('selectInput').value = e.innerText;
           const checkedItem = document.querySelector('.selectField ul > li[checked]');
           if (checkedItem) checkedItem.removeAttribute('checked');
           e.setAttribute('checked', '');
