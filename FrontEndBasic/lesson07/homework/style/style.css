@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+header {
+  position: relative;
+}
+
+header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: inline-block;
+  margin-left: 100px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.menu {
+  float: right;
+  margin: 0 100px;
+  padding: 0;  
+}
+
+.menu > li {
+  display: inline-block;
+  padding: 45px 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #191919;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.menu a:hover {
+  color: #10c9c3;
+}
+
+.description {
+  background-color: #141414;
+  opacity: 0.6;
+  color: #fff;
+}
+
+.description h1 {
+  margin: 0;
+  padding-top: 120px; 
+  padding-bottom: 20px;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.description p {
+  margin: 0;
+  padding-top: 20px; 
+  padding-bottom: 120px;
+  text-align: center;
+  font-family: "Nunito Sans";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.indicators {
+  background-color: #10c9c3;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
