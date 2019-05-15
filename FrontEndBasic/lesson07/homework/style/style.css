@@ -49,6 +49,7 @@ header::after {
 }
 
 .description {
+  padding: 80px 0;
   background-color: #141414;
   opacity: 0.6;
   color: #fff;
@@ -56,7 +57,6 @@ header::after {
 
 .description h1 {
   margin: 0;
-  padding-top: 120px; 
   padding-bottom: 20px;
   text-align: center;
   font-family: Montserrat;
@@ -67,7 +67,6 @@ header::after {
 .description p {
   margin: 0;
   padding-top: 20px; 
-  padding-bottom: 120px;
   text-align: center;
   font-family: "Nunito Sans";
   font-size: 18px;
@@ -75,12 +74,37 @@ header::after {
 }
 
 .indicators {
+  padding: 65px 0;
   background-color: #10c9c3;
   color: #fff;
   font-family: Montserrat;
   font-size: 12px;
   font-weight: 500;
-  line-height: 30px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  text-align: center;
+}
+
+.indicator {
+  display: inline-block;
+  width: 205px;
+  text-align: initial;
+}
+
+
+.indicator + .indicator {
+  margin-left: 25px;
+}
+
+.indicator img {
+  vertical-align: text-bottom;
+}
+
+.indicator > div {
+  display: inline-block;
+  margin-left: 15px;
+  line-height: 20px;
+}
+
+.indicator-count {
+  font-size: 18px;
 }
