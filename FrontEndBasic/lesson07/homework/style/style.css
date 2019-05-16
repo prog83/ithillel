@@ -89,7 +89,7 @@ header::after {
   display: inline-block;
   width: 100%;
   max-width: 255px;
-  text-align: initial;
+  text-align: left;
 }
 
 .indicator img {
