@@ -107,8 +107,7 @@ header::after {
   letter-spacing: initial;
 }
 
-.about-me-panel {
-  display: inline-block;  
+.about-me-panel {  
   float: right;
   width: 50%;
   box-sizing: border-box;
