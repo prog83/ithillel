@@ -1,0 +1,386 @@
+body {  
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 0 100px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#toggle-menu {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  width: 42px;
+  height: 42px;
+  margin: 1px;
+  border-radius: 50%;
+  background-image: linear-gradient(0deg, #191919, #191919 3px, transparent 3px, transparent 6px, #191919 6px, #191919 9px, transparent 9px, transparent 12px, #191919 12px);
+  background-position: center center;
+  background-size: 24px 15px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: background-color .5s ease-in-out;
+}
+
+.menu-icon:hover {
+  background-color: rgba(0, 0, 0, 0.08);  
+  transition: .5s ease-in-out;
+}
+
+#toggle-menu:checked + .menu {
+  width: 168px;  
+  transition: .5s ease-in-out;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0; 
+}
+
+.menu > li {
+  display: inline-block;
+  padding: 40px 15px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #191919;
+  font-size: 12px;
+  font-weight: bold;  
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.menu a:hover {
+  color: #10c9c3;
+}
+
+.description {
+  padding: 115px 10px;
+  background-color: #141414;
+  opacity: 0.8;
+  color: #fff;
+}
+
+.description h1 {
+  margin: 0;
+  padding-bottom: 20px;
+  text-align: center;  
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.description p {
+  margin: 0;
+  padding-top: 20px;
+  text-align: center;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0.3px;
+}
+
+.indicators {
+  padding: 95px 0;
+  background-color: #10c9c3;
+  color: #fff;  
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.indicator {
+  display: inline-block;
+  width: 100%;
+  max-width: 255px;
+  text-align: left;
+}
+
+.indicator img {
+  vertical-align: text-bottom;
+}
+
+.indicator > div {
+  display: inline-block;
+  margin-left: 15px;
+  line-height: 24px;
+}
+
+.indicator-count {
+  font-size: 18px;
+  letter-spacing: initial;
+}
+
+.about-me {
+  position: relative;
+}
+
+.column-1 {
+  float: left;
+  width: 50%;  
+  box-sizing: border-box;
+  font-size: 0;
+  text-align: center;
+}
+
+.column-1 img {
+  width: 100%;
+  max-width: 573px;  
+}
+
+.column-2 {  
+  float: right;
+  width: 50%;
+  box-sizing: border-box;
+  background-color: #f5f5f5;  
+  padding: 135px 20px 135px 85px;
+}
+
+.column-2 > h2, .lets-talk h2 {
+  margin: 0;
+  color: #191919;
+  font-size: 30px;
+  font-weight: bold;  
+}
+
+.column-2 > p, .lets-talk p {
+  margin: 25px 0;
+  font-family: "Nunito Sans", sans-serif;
+  color: #787878;
+  line-height: 24px;
+  font-size: 16px;  
+}
+
+.column-2 > img {
+  width: 100%;
+  max-width: 223px;
+  margin-top: 10px;  
+}
+
+.lets-talk {
+  clear: both;
+  padding: 100px 10px;
+  background: #fff;
+  text-align: center;
+}
+
+.lets-talk a {
+  display: inline-block;
+  width: 180px;
+  height: 54px;
+  margin-top: 10px;
+  background-color: #10c9c3;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 54px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;  
+}
+
+footer {  
+  padding: 95px 0;
+  background-color: #141414;
+  font-family: "Nunito Sans", sans-serif;
+  color: #bcbcbc;
+  font-size: 15px;
+  line-height: 24px;  
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer a:hover {
+  color: #10c9c3;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer > div {
+  display: table;
+  width: 100%;
+  max-width: 80%;
+  margin: auto;
+}
+
+footer > div > div, footer ul {
+  display: table-cell;
+  vertical-align: top;
+  padding: 0 5px;
+}
+
+footer ul {  
+  list-style: none;
+}
+
+footer ul:nth-last-of-type(2) {
+  width: 15%;
+}
+
+footer .copyright p:first-child {
+  color: #ffffff;
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 800px) {
+  .about-me .column-2 {
+    padding: 50px 20px;
+  }
+}
+
+@media (min-width: 576px) {
+  #toggle-menu:checked + .menu {
+    width: 260px;
+    transition: none;
+  }
+}
+
+@media (max-width: 575px) {
+  header {
+    padding: 0 40px;
+  }
+
+  .menu-icon {
+    display: inline-block;
+  }
+
+  .menu {
+    width: 0;
+    position: absolute;
+    top: 44px;
+    right: 0;
+    border-bottom-left-radius: 3px;
+    background-color: #fff;
+    z-index: 999;
+    transition: width .5s ease-in-out;
+  }
+
+  .menu > li {
+    display: block;
+    margin: 0 20px;
+    padding: 10px 30px;
+  }
+
+  .menu > li + li {
+    border-top: 1px solid #191919;
+  }
+
+  .description {
+    padding: 75px 10px;
+  }
+
+  .indicators {
+    padding: 50px 0;
+  }
+
+  .about-me .column-1, .about-me .column-2 {
+    float: none;
+    width: auto;    
+  }
+
+  .about-me .column-2 {
+    padding: 50px 10px;
+  }
+
+  .about-me .column-2 h2 {
+    text-align: center;
+  }
+
+  .lets-talk {
+    padding: 50px 10px;
+  }
+
+  footer {
+    padding: 50px 10px;    
+    font-size: 0.75em;
+  }
+
+  footer > div {
+    max-width: 100%;
+  }
+
+  footer .copyright p:first-child {
+    font-size: 1em;
+  }
+
+  footer ul:nth-last-of-type(2) {
+    width: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .description {
+    padding: 50px 10px;
+  }
+
+  .description h1 {
+    font-size: 2em;
+  }
+
+  .description p {
+    font-size: 1em;
+  }
+
+  .indicators {
+    padding: 25px 0;
+  }
+
+  .about-me .column-1 {
+    float: none;
+    width: auto;    
+  }
+
+  .about-me .column-2 {
+    float: none;
+    width: auto;
+    padding: 25px 10px;
+  }
+
+  .lets-talk {
+    padding: 25px 10px;
+  }
+
+  .lets-talk h2 {
+    font-size: 1.5em;
+  }
+
+  .lets-talk p {
+    font-size: 1em;
+  }
+
+  footer {
+    padding: 25px 10px;
+    text-align: center;
+  }
+
+  footer > div > div, footer ul {
+    display: block;
+  }  
+}
