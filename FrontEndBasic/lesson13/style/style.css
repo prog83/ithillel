@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#main {
+  max-width: 1920px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  color: #2a2d2e;
+  font-family: "Proxima Nova", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  word-wrap: normal;
+}
+
+header a {
+  color: #2a2d2e;
+}
+
+header ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-main {
+  margin-left: 5%;
+}
+
+.menu-main li + li {
+  margin-left: 30px;
+}
+
+.menu-social {
+  margin-left: 5%;
+}
+.menu-social li + li {
+  margin-left: 15px;
+}
+
+.menu-social li:nth-of-type(1) {
+  margin-right: 20px;
+}
+.title {
+  position: relative;
+}
+
+.title > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: linear-gradient(to left, #f82e6f 0%, #cf38ef 100%);
+  background-clip: text;
+  color: #12bbcb;
+  font-size: 72px;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 1.44px;
+  z-index: 999;
+}
+
+.title > img {
+  width: 100%;
+}
+
+.about-us {
+  display: flex;
+}
+
+.about-us-image {
+  width: 50%;
+}
+
+.about-us-image > img {
+  width: 100%;
+  max-width: 693px;
+}
+
+.about-us-description {
+  width: 50%;
+  color: #3a4142;
+}
+
+.about-us-description h3 {
+  text-align: right;
+  font-family: "Proxima Nova - Black";
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.about-us-description p {
+  font-family: "Proxima Nova";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 36px;
+}
+
+.about-us-description a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 300px;
+  height: 60px;
+  border-radius: 30px;
+  padding-left: 60px;
+  padding-right: 40px;
+  background-color: #0996e2;
+  background-image: linear-gradient(to left, #d828b8 0%, #cf38ef 100%);
+  opacity: 0.84;
+}
+
+.about-us-description a img {
+  /* width: 27px; */
+}

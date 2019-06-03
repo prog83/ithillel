@@ -113,7 +113,7 @@ header {
   margin: 0;
   padding-top: 20px;
   text-align: center;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 28px;
@@ -189,7 +189,7 @@ header {
 .column-2 > p,
 .lets-talk p {
   margin: 25px 0;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #787878;
   line-height: 24px;
   font-size: 16px;
@@ -236,6 +236,39 @@ header {
 .card {
   width: 25%;
   height: 300px;
+  position: relative;
+}
+
+.card > img {
+  max-width: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card:hover::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(16, 201, 195, 0.85);
+}
+
+.card:hover::after {
+  content: url(../img/look.png);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  /* display: inline-block; */
+
+  /* background-image: url(../img/look.png); */
+  /* background-position: center center;
+  background-repeat: no-repeat; */
 }
 
 .cards .card:nth-child(odd) {
@@ -251,7 +284,7 @@ footer {
   justify-content: space-around;
   padding: 95px 5%;
   background-color: #141414;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
   color: #bcbcbc;
   font-size: 15px;
   line-height: 24px;
