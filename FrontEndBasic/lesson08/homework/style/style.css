@@ -4,6 +4,11 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+#main {
+  max-width: 1366px;
+  margin: auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -83,7 +88,7 @@ header {
 }
 
 .description {
-  padding: 115px 10px;
+  padding: 95px 10px;
   opacity: 0.8;
 }
 
@@ -228,7 +233,6 @@ header {
   flex-direction: column;
   flex-wrap: wrap;
   align-items: flex-start;
-  max-width: 1366px;
   max-height: 900px;
   margin: auto;
 }
