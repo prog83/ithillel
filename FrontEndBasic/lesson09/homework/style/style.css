@@ -90,9 +90,8 @@ header {
   color: #10c9c3;
 }
 
-.contact {
+article.contact {
   padding: 100px;
-  background-color: #f5f5f5;
 }
 
 .description {
@@ -296,20 +295,16 @@ header {
 }
 
 .contact-info h2 {
-  margin: 0;
   color: #171717;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 500;
+  line-height: 84px;
   letter-spacing: 0.3px;
-  line-height: 48px;
 }
-
-.contact-info p span:first-child {
-  color: #171717;
-  font-weight: 700;
-}
-
 .contact-info form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 60%;
   box-sizing: border-box;
   margin-left: auto;
@@ -331,24 +326,6 @@ header {
 
 .contact-info textarea {
   width: 100%;
-}
-
-.contact-info input,
-.contact-info textarea {
-  background-color: #fff;
-  border: 0;
-  outline: 0;
-  padding: 10px 15px;
-  box-sizing: border-box;
-  color: #787878;
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 24px;
-}
-
-.contact-info input {
-  height: 48px;
 }
 
 footer {
