@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 1px solid black;
+        counter-reset: order;
+      }
+
+      li + li {
+        border-top: 1px solid black;
+      }
+
+      li::before {
+        counter-increment: order;
+        content: 'Секция№ ' counter(order) ' ' attr(data-goals) ' '
+          attr(data-name);
+      }
+
+      li:after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: red;
+      }
+
+      li[data-online]:after {
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <ul class="list-users">
+      <li data-goals="201" data-name="Александр" data-online></li>
+      <li data-goals="21" data-name="Иван"></li>
+      <li data-goals="508" data-name="Владимир"></li>
+      <li data-goals="79" data-name="Настя" data-online></li>
+    </ul>
+  </body>
+</html>
