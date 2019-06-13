@@ -8,12 +8,11 @@ a {
   text-decoration: none;
 }
 
-#main {
-  max-width: 1366px;
-  margin: auto;
-}
-
 header {
+  width: 100%;
+  max-width: 1366px;
+  box-sizing: border-box;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -90,6 +89,12 @@ header {
   color: #10c9c3;
 }
 
+main {
+  max-width: 1366px;
+  margin: auto;
+  background: #f5f5f5;
+}
+
 article.contact {
   padding: 100px;
 }
@@ -147,6 +152,7 @@ article.contact {
   display: inline-block;
   width: 100%;
   max-width: 255px;
+  margin-left: 10px;
   text-align: left;
 }
 
@@ -173,6 +179,7 @@ article.contact {
   float: left;
   width: 50%;
   box-sizing: border-box;
+  background: #fff;
   font-size: 0;
   text-align: center;
 }
@@ -219,7 +226,7 @@ article.contact {
   text-align: center;
 }
 
-.lets-talk a {
+.button {
   display: inline-block;
   width: 180px;
   height: 54px;
@@ -259,21 +266,25 @@ article.contact {
 }
 
 .card:hover::before {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(16, 201, 195, 0.85);
-}
-
-.card:hover::after {
   content: url(../img/look.png);
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
+  z-index: 1200;
+}
+
+.card:hover::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    rgba(16, 201, 195, 0.7),
+    rgba(16, 201, 195, 0.7)
+  );
 }
 
 .cards .card:nth-child(odd) {
@@ -295,22 +306,45 @@ article.contact {
 }
 
 .contact-info h2 {
+  margin: 0;
   color: #171717;
   font-size: 30px;
   font-weight: 500;
-  line-height: 84px;
+  line-height: 48px;
   letter-spacing: 0.3px;
 }
+
+.contact-info p {
+  margin: 1rem 0;
+}
+
+.contact-info a {
+  color: inherit;
+}
+
+.contact-info p > span {
+  color: #171717;
+  font-weight: 700;
+}
+
+.contact-info p > span {
+  color: #171717;
+  font-weight: 700;
+}
+
 .contact-info form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 60%;
+  width: 58%;
   box-sizing: border-box;
   margin-left: auto;
 }
 
-.contact-info form > div:first-child {
+.fields {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.fields > div:first-child {
   display: flex;
   justify-content: space-between;
 }
@@ -324,8 +358,24 @@ article.contact {
   width: 100%;
 }
 
+.contact-info input,
+.contact-info textarea {
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  padding: 15px 20px;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.contact-info input {
+  height: 48px;
+}
+
 .contact-info textarea {
   width: 100%;
+  height: 170px;
+  resize: none;
 }
 
 footer {
