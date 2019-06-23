@@ -29,19 +29,25 @@
           <li><a href="./home.html">Home</a></li>
           <li><a href="./about.html">About</a></li>
           <li><a href="./contact.html">Contact</a></li>
+          <li class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-dribbble fa-2x"></i></a>
+          </li>
         </ul>
+        <label for="toggle-menu"></label>
       </nav>
     </header>
     <main>
       <article class="contact">
         <section class="contact-info">
-          <div>
+          <div class="contact-info-description">
             <h2>Contact Info:</h2>
             <p>
-              To give give beginning divide, cattle. Give moving<br />
-              won't, there the abundantly she'd she'd brought air<br />
-              upon. Light hath subdue. Life days creature upon<br />
-              first heaven gathering dry.
+              To give give beginning divide, cattle. Give moving won't, there
+              the abundantly she'd she'd brought air upon. Light hath subdue.
+              Life days creature upon first heaven gathering dry.
             </p>
             <p><span>Address:</span> 10111 Santa Monica Boulevard, LA</p>
             <p>
@@ -55,23 +61,28 @@
               <span>Fax:</span><a href="tel:+44987065909"> +44 987 065 909</a>
             </p>
           </div>
-          <form action="">
-            <div class="fields">
-              <div>
-                <input name="name" type="text" placeholder="Your Name" />
-                <input name="email" type="email" placeholder="Your Email" />
-              </div>
-              <div>
-                <input name="title" type="text" placeholder="Your Title" />
-              </div>
-              <div>
-                <textarea name="comment" placeholder="Your Comment"></textarea>
-              </div>
+          <form class="contact-info-form" action="">
+            <div>
+              <input name="name" type="text" placeholder="Your Name" />
+              <input name="email" type="email" placeholder="Your Email" />
             </div>
-            <input type="submit" value="SEND MESSAGE" class="button" />
+            <div>
+              <input name="title" type="text" placeholder="Your Title" />
+            </div>
+            <div>
+              <textarea name="comment" placeholder="Your Comment"></textarea>
+            </div>
+            <input
+              id="submit"
+              type="submit"
+              value="SEND MESSAGE"
+              class="button"
+            />
           </form>
         </section>
-        <section class="map"></section>
+        <section>
+          <div id="map"></div>
+        </section>
       </article>
     </main>
     <footer>
@@ -99,12 +110,34 @@
         <li><a href="./contact.html">Contact</a></li>
         <li><a href="#">Legals</a></li>
       </ul>
-      <ul>
+      <ul class="footer-social">
         <li><a href="#">Facebook</a></li>
         <li><a href="#">Twitter</a></li>
         <li><a href="#">Instagram</a></li>
         <li><a href="#">Dribbble</a></li>
       </ul>
     </footer>
+    <script src="https://kit.fontawesome.com/c97da5b760.js"></script>
+    <script>
+      // Initialize and add the map
+      function initMap() {
+        // The location of Uluru
+        var uluru = { lat: 50.436892, lng: 30.5321448 };
+        // The map, centered at Uluru
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru,
+        });
+        // The marker, positioned at Uluru
+        var marker = new google.maps.Marker({ position: uluru, map: map });
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=
+      AIzaSyC4V2whQm4EjW1MXPuNDXsKx_hQBytkfH8
+      &callback=initMap"
+    ></script>
   </body>
 </html>
