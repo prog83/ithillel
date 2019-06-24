@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Digital watch</title>
+    <style>
+      .clock {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        top: calc(50% - 100px);
+        left: calc(50% - 100px);
+        border: 3px solid #000;
+        border-radius: 50%;
+        background: #fff;
+      }
+
+      .point {
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        top: calc(50% - 7px);
+        left: calc(50% - 7px);
+        border-radius: 50%;
+        background: #000;
+      }
+
+      .hour {
+        position: absolute;
+        width: 2px;
+        height: 50px;
+        top: calc(50% - 50px);
+        left: calc(50% - 4px);
+        border-left: 3px solid #000;
+        border-right: 3px solid #000;
+        transform-origin: center bottom;
+        animation: hour 43200s steps(60, end) infinite -10800s;
+      }
+
+      .hour::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: calc(50% - 4px);
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 10px solid #000;
+      }
+
+      .minute {
+        position: absolute;
+        height: 70px;
+        top: calc(50% - 70px);
+        left: calc(50% - 2px);
+        border-left: 2px solid #000;
+        border-right: 2px solid #000;
+        transform-origin: center bottom;
+        animation: hour 3600s steps(60, end) infinite -3540s;
+      }
+
+      .minute::after {
+        content: '';
+        position: absolute;
+        top: -4px;
+        left: calc(50% - 2px);
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+        border-bottom: 4px solid #000;
+      }
+
+      .second {
+        position: absolute;
+        height: 80px;
+        top: calc(50% - 80px);
+        left: calc(50% - 1px);
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+        transform-origin: center bottom;
+        animation: hour 60s steps(60, end) infinite;
+      }
+
+      .second::before {
+        content: '';
+        position: absolute;
+        top: calc(100% - 3px);
+        left: calc(50% - 3px);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: red;
+      }
+
+      .second::after {
+        content: '';
+        position: absolute;
+        top: -6px;
+        left: calc(50% - 3px);
+        border-left: 3px solid transparent;
+        border-right: 3px solid transparent;
+        border-bottom: 6px solid red;
+      }
+
+      @keyframes hour {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <div class="point"></div>
+
+      <div class="hour"></div>
+      <div class="minute"></div>
+      <div class="second"></div>
+    </div>
+  </body>
+</html>
